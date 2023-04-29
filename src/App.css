@@ -43,7 +43,7 @@
 input {
   border: none;
   text-align: center;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid;
   padding: 5px 2px;
   margin: 5px 2px;
   font-size: 12px;
