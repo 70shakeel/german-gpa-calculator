@@ -61,7 +61,7 @@ function App() {
         <p>
           <strong>Your grade in the German system</strong>
         </p>
-        <p>{germanGPA}</p>
+        <p className="calculatedGPA">{germanGPA}</p>
         <button onClick={handleSubmit}>Convert</button>
       </form>
     </>
