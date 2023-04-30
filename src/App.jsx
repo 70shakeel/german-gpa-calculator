@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import "./App.css";
+import gerGrade from "./assets/images/german-grading.jpg";
 
 function App() {
   const [germanGPA, setgermanGPA] = useState("");
@@ -10,7 +11,8 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setgermanGPA(((cGpa - maxGpa) / (minGpa - maxGpa)) * 3 + 1);
+    const num = ((cGpa - maxGpa) / (minGpa - maxGpa)) * 3 + 1;
+    setgermanGPA(num.toFixed(2));
   };
   return (
     <>
@@ -64,6 +66,10 @@ function App() {
         <p className="calculatedGPA">{germanGPA}</p>
         <button onClick={handleSubmit}>Convert</button>
       </form>
+      <br />
+      {germanGPA.length > 1 && (
+        <img src={gerGrade} alt="german grades" width="100%" />
+      )}
     </>
   );
 }
